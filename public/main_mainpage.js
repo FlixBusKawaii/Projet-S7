@@ -1,5 +1,6 @@
 const URL_STAGE = 'http://localhost:3010/stage'
 const table = document.querySelector("#infostage");
+const { writeFileSync } = require("fs");
 
 const info_user = new URLSearchParams(URL_STAGE+"?token=%40&role=%40");
 
@@ -43,7 +44,7 @@ const read = async () => {
     reader.onloadend = () => {
         send_doc(reader.result);
     }
-}
+};
 
 document.querySelector("#doc").addEventListener("change", read);
 
