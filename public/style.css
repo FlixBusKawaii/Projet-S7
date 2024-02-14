@@ -4,7 +4,7 @@
     font-family: 'Comme', sans-serif;
 }
 
-html, body {
+html{
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,10 +15,45 @@ html, body {
     font-size: small;
 }
 
-table{
-    margin: 0 auto;
+body{
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
 }
 
+table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: larger;
+    position: center;
+}
+
+#styletab{
+    position: center;
+    border: 10px double #a1b000;
+    border-radius: 1em;
+    background-color: white;
+}
+
+td {
+    padding: 0.75em 1em;
+}
+
+thead tr {
+    border-bottom: 2px solid black;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #999;
+    background-color: #ff5b5bcb;
+}
+
+tr:nth-child(2n) {
+    background-color: #4cff64be;
+}
+/*
 #more{
     width: 25px;
     height: 25px;
@@ -38,28 +73,35 @@ table{
     text-align: center;
     padding: 10px 0;
 }
-
-#Image{
-    grid-row: 1 / span 3;
-    grid-column: 2;
-}
-
-#Pictogramme{
-    grid-row: 4 / span 2;
-    grid-column: 2;
-}
-
+*/
 #retour{
     grid-row: 6;
     grid-column: 1 / span 2;
 }
 
-#imP{
-    width: 300px;
-    height: 200px;
+#idform{
+    position: relative;
+    width: 740px;
+    height: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2em 2em 2em;
+    padding: 1em;
 }
 
-#pic{
-    width: 60px;
-    height: 60px;
+#idbloc{
+    position: center;
+    border: 10px outset #ff6550;
+    border-radius: 1em;
+    background-color: white;
+}
+
+h1{
+    padding: 0.7em;
+    Font-family: Bodoni MT;
+    font-size: 3.5em;
+    border: 13px ridge #50fff5;
+    background-color: beige;
 }
