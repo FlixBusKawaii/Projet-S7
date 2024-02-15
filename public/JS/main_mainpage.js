@@ -5,13 +5,14 @@ const grid = document.querySelector("#grid");
 const param = new URLSearchParams(document.location.search);
 const User="token="+param.get("token")+"&role="+param.get("role");
 
-
+//Calls constructGrid by giving the datasets containing all the informations of the stage
 const get_stage = () => {
     fetch((URL_STAGE+"?key=stageDetail&"+User+"&Id_Stage="+param.get("id")))
     .then(res => res.json())
     .then(json => constructGrid(json));
 };
 
+//Allows to construct the array containing the informations of the selected internship
 const constructGrid = item => {
     let content = document.createElement("p");
 
@@ -65,6 +66,7 @@ const constructGrid = item => {
     content = document.createElement("p");
 };
 
+//Allows to give a document to the database
 const send_doc = async data => fetch(URL_STAGE, {
     method: "post",
     headers: {
@@ -73,6 +75,7 @@ const send_doc = async data => fetch(URL_STAGE, {
     body: data
 });
 
+//Allows to get a document from the database
 const read = async () => {
     /** @type {File} */
     let file = document.querySelector("#doc").files[0];

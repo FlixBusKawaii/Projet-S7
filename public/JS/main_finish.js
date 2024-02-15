@@ -1,4 +1,4 @@
-
+//When the internship is loaded, this function get IDs and all the informations needed
 window.onload = (event) => {
 
     const param = new URLSearchParams(document.location.search);
@@ -8,5 +8,5 @@ window.onload = (event) => {
 
     document.getElementById("after").href="hub.html?"+User
 
-    console.log("page is fully loaded");
+    console.log("Page is fully loaded");
 };
