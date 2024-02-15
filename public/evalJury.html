@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des produits</title>
     <link rel="stylesheet" href="style.css">
-    <script src="JS/main_mainpage.js" defer></script>
+    <script src="JS/main_upload.js" defer></script>
 </head>
 <body>
     <div>
         <h1>Gestion des stages</h1>
     </div>
     <div>
-        <h2>Documents relatifs au stage</h2>
-        <table>
-            <tbody id="infostage">
-                
-            </tbody>
-        </table>
+        <h3>Transmettre un document : </h3>
+        <div>
+            <p><a href="docs/5A_NomStagiaire_APPRECIATION_STAGE_2022.xlsx">Télécharger la fiche de notation</a></p>
+        </div>
+        <form id="form" method="post" enctype="multipart/form-data">
+            <input type="file" name="doc" id="doc" required accept="application/pdf">
+            <input type="submit" value="doc">
+        </form>
     </div>
-    
 </body>
 </html>

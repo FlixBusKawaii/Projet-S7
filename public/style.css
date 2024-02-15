@@ -53,7 +53,11 @@ tr:not(:last-child) {
 tr:nth-child(2n) {
     background-color: #4cff64be;
 }
-/*
+
+tr img{
+    width: 2em;
+}
+
 #more{
     width: 25px;
     height: 25px;
@@ -61,7 +65,7 @@ tr:nth-child(2n) {
 
 #grid{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     background-color: darkgoldenrod;
     gap: 10px;
     padding: 10px;
@@ -73,10 +77,50 @@ tr:nth-child(2n) {
     text-align: center;
     padding: 10px 0;
 }
-*/
+
 #retour{
-    grid-row: 6;
+    grid-row: 4;
+    grid-column: 1 / span 4;
+}
+
+#Nom{
+    grid-row: 1;
+    grid-column: 1 / span 3;
+}
+
+#Statut{
+    grid-row: 1;
+    grid-column: 4;
+}
+
+#Stagiaire{
+    grid-row: 2;
     grid-column: 1 / span 2;
+}
+
+#Tuteur{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+#Jury{
+    grid-row: 2;
+    grid-column: 4;
+}
+
+#CR{
+    grid-row: 3;
+    grid-column: 1 / span 2;
+}
+
+#Note{
+    grid-row: 3;
+    grid-column: 3;
+}
+
+#Detail{
+    grid-row: 3;
+    grid-column: 4;
 }
 
 #idform{
